@@ -424,20 +424,29 @@ header .hide-in-desktop {
     }
   }
   .steps-content{
+    /*flexbox*/
     display:flex;
     flex-direction:column;
-    margin-bottom:30px;
+    /*size*/
+    margin-bottom:25px;
     .step{
+      /*flexbox*/
       display:flex;
       flex-direction:column;
+      /*position*/
+      margin:6px 0;
       .step-header{
         /*flexbox*/
         display:flex;
         align-items:center;
         gap:10px;
+        /*size+position*/
         height:30px;
         margin-top:18px;
         .step-number{
+          display:flex;
+          align-items:center;
+          justify-content:center;
           /*size*/
           width: 25px;
           height: 25px;
@@ -473,13 +482,71 @@ header .hide-in-desktop {
     border:none;
     border-radius: 0.57143rem;
     background-color: rgb(242, 110, 34);
+    cursor:pointer;
     /*text*/
     font-size: 1rem;
     color:white;
     /*size+position*/
     width: 160px;
     height: 39px;
-    margin-top:10px;
+    margin-top:14px;
+  }
+}
+
+.why-pricefox{
+  /*flexbox*/
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  /*size+position*/
+  padding:20px 0 30px;
+  .why-title{
+    margin:24px 20px;
+    h2{
+      font-weight: 700;
+      font-size:1.71rem;
+      text-align:center;
+    }
+  }
+  .why-cards{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    .card{
+      /*flexbox*/
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      /*box*/
+      background: #ffffff;
+      box-shadow: 0 0 29px rgba(0, 0, 0, 0.13);
+      border-radius: 15px;
+      /*size+position*/
+      height:215px;
+      width:auto;
+      margin:10px 10px;
+      padding:17px;
+      img{
+        width:115px;
+        height:46px;
+      }
+      .info-title{
+        /*position+size*/
+        margin: 15px 0;
+        height:26px;
+        /*text*/
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 20px;
+      }
+      .info-description{
+        /*position*/
+        margin:13px 0;
+        /*text*/
+        font-size: 13px;
+        color: #92a2aa;
+      }
+    }
   }
 }
 
