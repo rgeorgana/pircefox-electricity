@@ -617,6 +617,109 @@ header .hide-in-desktop {
   }
 }
 
+.google-reviews{
+  background-color: #004766;
+  /*size+position*/
+  height: auto;
+  margin-top:70px;
+  padding:40px 0 50px;
+  .reviews-content{
+    /*flexbox*/
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    /*size*/
+    width:240px;
+    margin:auto;
+    h2{
+      text-align:center;
+      line-height: 30px;
+      font-size: 27px;
+      color:white;
+    }
+    p{
+      /*text*/
+      text-align:center;
+      color:white;
+      /*position*/
+      margin:-6px 0 4px;
+    }
+    .google-rating{
+      /*flexbox*/
+      display:flex;
+      justify-content: center;
+      align-items:center;
+      gap:10px;
+      /*size*/
+      height: 42px;
+      .google{
+        width:28px;
+        height:38px;
+      }
+      .rating{
+        font-size: 18px;
+        font-weight: 400;
+      }
+      .stars{
+        width: 101px;
+        height: 25px;
+      }
+    }
+    .review{
+      /*flexbox*/
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      /*size*/
+      width: 300px;
+      height:190px;
+      padding:15px 13px;
+      margin:-2px 0;
+      /*box*/
+      background:white;
+      border-radius: 8px;
+      .date{
+        /*position*/
+        margin:0 0 3px;
+        align-self:flex-end;
+        /*text*/
+        color: #92A2AA;
+        font-size:12px;
+      }
+      .name{
+        /*position*/
+        margin: -2px 0 3px 5px;
+        /*text*/
+        color: #00314C;
+        font-size: 1.14rem;
+      }
+      .full-stars{
+        width:83px;
+        height:16px;
+      }
+      .review-and-logo{
+        display:flex;
+        .review-text{
+          /*text*/
+          line-height:18px;
+          text-align:left;
+          color: #92A2AA;
+          font-size:14px;
+          /*size+position*/
+          width: 244px;
+          height:79px;
+          margin: 7px 0 14px 10px;
+        }
+        .google-s{
+          align-self:flex-end;
+          width:20px;
+          height:30px;
+        }
+      }
+    }
+  }
+}
 
 @media (min-width:993px){
   .hide-in-desktop{
