@@ -550,6 +550,74 @@ header .hide-in-desktop {
   }
 }
 
+.providers-section{
+  display:flex;
+  flex-direction:column;
+  /*size+position*/
+  margin: auto;
+  padding-top:30px;
+  width:320px;
+  .hide-in-desktop {
+    .providers-header{
+      margin-bottom:50px;
+      h2{
+        font-size: 23px;
+        line-height: 30px;
+        text-align:center;
+      }
+    }
+    .providers {
+      /*flexbox*/
+      display: flex;
+      flex-wrap: wrap;
+      justify-content:space-around;
+      align-content: center;
+      /*size*/
+      width: 320px;
+      height: 202px;
+      .heron {
+        width: 203px;
+        height: 50px;
+      }
+      .elin {
+        width: 65px;
+        height: 44px;
+        margin-top:10px;
+      }
+      .volton {
+        width: 79px;
+        height: 60px;
+        margin-top:10px;
+      }
+      .eunice {
+        width: 65px;
+        height: 50px;
+        margin: 17px 0 0 10px;
+      }
+      .protergia {
+        width: 89px;
+        height: 65px;
+      }
+      .zenith {
+        width: 95px;
+        height: 50px;
+        margin-top:20px;
+      }
+      .fysiko-aerio {
+        width: 85px;
+        height: 63px;
+        margin: 10px 23px 10px;
+      }
+      .nrg {
+        width: 88px;
+        height: 45px;
+        margin-top:20px;
+      }
+    }
+  }
+}
+
+
 @media (min-width:993px){
   .hide-in-desktop{
     display:none !important;
