@@ -621,7 +621,7 @@ header .hide-in-desktop {
   background-color: #004766;
   /*size+position*/
   height: auto;
-  margin-top:70px;
+  margin:70px 0 30px;
   padding:40px 0 50px;
   .reviews-content{
     /*flexbox*/
@@ -716,6 +716,49 @@ header .hide-in-desktop {
           width:20px;
           height:30px;
         }
+      }
+    }
+  }
+}
+
+.awards-section{
+  /*size*/
+  margin: auto;
+  padding: 30px 0;
+  /*flexbox*/
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  img{
+    width:125px;
+    height:125px;
+  }
+  h2{
+    /*text*/
+    font-size: 28px;
+    /*position*/
+    margin: 15px 0 55px;
+  }
+  .awards{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:30px;
+    .award{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      img{
+        width:110px;
+        height:120px;
+      }
+      p{
+        /*text*/
+        font-size: 18px;
+        line-height: 20px;
+        text-align:center;
+        /*position*/
+        margin: 10px 0 40px;
       }
     }
   }
