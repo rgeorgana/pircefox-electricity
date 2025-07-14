@@ -881,7 +881,7 @@ header .hide-in-desktop {
 }
 
 .support{
-  margin-top:90px;
+  margin:90px 0 70px;
   .phone-support{
     display:flex;
     flex-direction: column;
@@ -967,6 +967,63 @@ header .hide-in-desktop {
     a{
       font-weight: 700;
       font-size: 20px;
+    }
+  }
+}
+
+.footer-links{
+  /*size*/
+  padding: 100px 8% 50px;
+  /*box*/
+  background-color:#ECF6FF;
+  .links-section{
+    margin-bottom:30px;
+    .links-title{
+      /*flexbox*/
+      display:flex;
+      gap: 124px;
+      /*position*/
+      margin-bottom: 20px;
+      .title-container{
+        p{
+          /*position*/
+          margin-left:18px;
+          /*text*/
+          font-size: 1.21rem;
+          font-weight: 700;
+        }
+      }
+      .hr-container{
+        flex: 1 1 auto;
+        hr{
+          /*text*/
+          height:1px;
+          color: #BBC0D1;
+          /*position*/
+          margin-top:7px;
+        }
+      }
+    }
+    .links-content{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 66px;
+      .links{
+        /*flexbox*/
+        display:flex;
+        flex-direction:column;
+        /*size*/
+        width:350px;
+        /*position*/
+        padding-left:25px;
+        a{
+          /*position*/
+          margin-bottom:10px;
+          /*text*/
+          font-size: 1.14rem;
+          font-weight: 400;
+        }
+      }
     }
   }
 }
