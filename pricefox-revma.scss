@@ -12,9 +12,6 @@ html {
   font-size: 14px;
 }
 
-body{
-}
-
 a, a:visited, a:hover, a:active{
   text-decoration:none;
   color:rgb(0, 49, 76);
@@ -973,7 +970,7 @@ header .hide-in-desktop {
 
 .footer-links{
   /*size*/
-  padding: 100px 8% 50px;
+  padding: 100px 8% 30px;
   /*box*/
   background-color:#ECF6FF;
   .links-section{
@@ -1024,6 +1021,128 @@ header .hide-in-desktop {
           font-weight: 400;
         }
       }
+    }
+  }
+}
+
+.footer{
+  /*flexbox*/
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  gap: 60px;
+  /*background*/
+  background-color: #004467;
+  /*size*/
+  padding: 40px 5% 30px;
+  .footer-header{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    img{
+      width: 268px;
+      height: 77px;
+      margin: auto;
+    }
+    p{
+      color:white;
+      font-size: 1.14rem;
+    }
+  }
+  .info-links-container{
+    /*flexbox*/
+    display:flex;
+    justify-content: space-around;
+    gap:3%;
+    /*size*/
+    padding: 10px 3% 10px;
+    width:100%;
+    .info-links-list{
+      /*flexbox*/
+      display:flex;
+      flex-direction: column;
+      /*size*/
+      padding: 0 15px;
+      max-width: 334px;
+      .info-links-title{
+        color:white;
+        font-size: 1.71rem;
+        font-weight: 700;
+      }
+      .info-links{
+        /*flexbox*/
+        display:flex;
+        flex-direction:column;
+        /*size*/
+        padding-top: 20px;
+        a{
+          /*position*/
+          padding-bottom: 10px;
+          /*text*/
+          color:white;
+          font-size: 1.14rem;
+        }
+      }
+    }
+  }
+  .espa {
+    /*flexbox*/
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    /*size+position*/
+    width: 635px;
+    height: 75px;
+    margin-top: -10px;
+    /*rounded*/
+    border-radius: 10px;
+    background-color: white;
+    img{
+      /*size+position*/
+      width: 630px;
+      height: 70px;
+    }
+  }
+  .bottom-text {
+    color: white;
+    text-align: center;
+    font-size: 1.14rem;
+  }
+  .national-bank{
+    /*flexbox*/
+    display: flex;
+    align-items: center;
+    /*size+position*/
+    margin-top: -20px;
+    width: 100%;
+    hr{
+      /*size*/
+      height: 2px;
+      width: 100%;
+      /*color*/
+      color: #BBC0D1;
+    }
+    img{
+      width: 113px;
+      height: 61px;
+      margin: 0 40px 30px;
+    }
+  }
+  .asterisk-text {
+    /*text*/
+    color: white;
+    text-align: center;
+    font-size: 1.14rem;
+    /*position*/
+    margin-top: -20px;
+  }
+  .end-text{
+    /*text*/
+    color: white;
+    text-align: center;
+    font-size: 1.14rem;
+    a{
+      color: #F26E22;
     }
   }
 }
@@ -1081,7 +1200,7 @@ header .hide-in-desktop {
       .type{
         /*text*/
         font-size: 12px;
-        overflow:hidden;
+        overflow: hidden;
         /*flex*/
         flex: 1 1 auto;
       }
