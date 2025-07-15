@@ -718,7 +718,7 @@ header .hide-in-desktop {
   }
 }
 
-.awards-section{
+.awards-section {
   /*size*/
   margin: auto auto 50px;
   padding: 30px 0;
@@ -726,39 +726,48 @@ header .hide-in-desktop {
   display: flex;
   flex-direction: column;
   align-items: center;
-  img{
+
+  img {
     width: 125px;
     height: 125px;
   }
-  h2{
+
+  h2 {
     /*text*/
     font-size: 28px;
     /*position*/
     margin: 15px 0 55px;
   }
-  .awards{
-    gap: 30px;
-  }
-  .awards, a{
+
+  .awards {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 30px;
 
-    .award{
-      display:- flex;
+    .award {
+      display: flex;
       flex-direction: column;
       align-items: center;
-      img{
+
+      img {
         width: 110px;
         height: 120px;
       }
-      p{
+
+      p {
         /*text*/
         font-size: 18px;
         line-height: 20px;
         text-align: center;
         /*position*/
         margin: 10px 0 40px;
+      }
+
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
     }
   }
@@ -772,6 +781,7 @@ header .hide-in-desktop {
   /*background*/
   background-image: url("https://assets.pricefox.gr/assets/blue-banner-background.svg");
   background-position :center;
+  background-size: cover;
   .banner-container{
     /*flexbox*/
     display: flex;
@@ -1145,6 +1155,9 @@ header .hide-in-desktop {
       color: #F26E22;
     }
   }
+  .mobile-s {
+    display: none;
+  }
 }
 
 @media (min-width: 993px){
@@ -1190,6 +1203,142 @@ header .hide-in-desktop {
 @media (max-width: 992px) {
   .hide-in-mobile{
     display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-links{
+    /*size*/
+    padding: 50px 8% 30px;
+    .links-section{
+      margin-bottom: 8px;
+      .links-title{
+        /*position*/
+        margin-bottom: 12px;
+        /*flex*/
+        justify-content: center;
+        .title-container{
+          p{
+            /*text*/
+            font-size: 1.21rem;
+            text-align: center;
+            /*position*/
+            margin-left: 0;
+          }
+        }
+        .hr-container{
+          display: none;
+        }
+      }
+      .links-content{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        .links{
+          /*position*/
+          padding: 0;
+          width: auto;
+          a{
+            /*position*/
+            margin-bottom: 12px;
+            /*text*/
+            font-size: 0.85rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer{
+  /*flexbox*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  /*size*/
+  padding: 20px 5% 0;
+  .footer-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+      width: 268px;
+      height: 67px;
+      margin: auto;
+    }
+    p{
+      font-size: 0.85rem;
+    }
+  }
+  .info-links-container{
+    /*flexbox*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*position*/
+    padding-top: 20px;
+    .info-links-list{
+      max-width: 300px;
+      padding: 20px 15px 18px;
+      .info-links-title{
+        font-size: 1.21rem;
+        text-align: center;
+      }
+      .info-links{
+        /*flexbox*/
+        display: flex;
+        flex-direction: column;
+        /*position*/
+        padding-top: 12px;
+        a{
+          /*position*/
+          padding-bottom: 12px;
+          /*text*/
+          font-size: 0.85rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .espa {
+    /*flexbox*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*size+position*/
+    width: 296px;
+    height: 55px;
+    margin: 30px auto 48px;
+    /*rounded*/
+    border-radius: 10px;
+    background-color: white;
+    img{
+      /*size+position*/
+      width: 287px;
+      height: 50px;
+    }
+  }
+  .bottom-text, .national-bank, .asterisk-text, .end-text {
+    display: none;
+  }
+  .mobile-s {
+    display: block;
+  }
+  hr {
+    /*size+position*/
+    height: 2px;
+    width: 100%;
+    margin-bottom: 20px;
+    /*color*/
+    color: white;
+  }
+  .end-text{
+    /*position*/
+    margin-bottom: 30px;
+    /*text*/
+    font-size: 0.85rem;
   }
 }
 
