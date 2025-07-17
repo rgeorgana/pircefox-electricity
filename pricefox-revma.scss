@@ -446,37 +446,43 @@ header .hide-in-desktop {
       flex-direction: column;
       /*position*/
       margin: 6px 0;
-      .step-header{
-        /*flexbox*/
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        /*size+position*/
-        height: 30px;
-        margin-top: 18px;
-        .step-number{
+      .steps-checkbox {
+        display: none;
+      }
+      .steps-toggle {
+        cursor: pointer;
+        .step-header{
+          /*flexbox*/
           display: flex;
           align-items: center;
-          justify-content: center;
-          /*size*/
-          width: 25px;
-          height: 25px;
-          /*circle*/
-          flex: 1 0 auto;
-          border-radius: 50%;
-          background: rgba(0, 71, 102, 0.5);
-          /*text*/
-          color: white;
-          text-align: center;
-        }
-        .step-title{
-          font-size: 1.28rem;
-          font-weight: 700;
+          gap: 10px;
+          /*size+position*/
+          height: 30px;
+          margin-top: 18px;
+          .step-number{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /*size*/
+            width: 25px;
+            height: 25px;
+            /*circle*/
+            flex: 1 0 auto;
+            border-radius: 50%;
+            background-color: #004766;
+            /*text*/
+            color: white;
+            text-align: center;
+          }
+          .step-title{
+            font-size: 1.14rem;
+            font-weight: 700;
+          }
         }
       }
       .step-text {
+        display: none;
         /*flexbox*/
-        display: flex;
         flex-direction: column;
         /*size+position*/
         padding: 17px 10px;
@@ -485,6 +491,19 @@ header .hide-in-desktop {
         p {
           margin: 7px 0;
         }
+      }
+      .steps-checkbox:checked +.steps-toggle {
+        .step-header {
+          .step-number {
+            background: rgba(0, 71, 102, 0.5);
+          }
+          .step-title {
+            font-size: 1.28rem;
+          }
+        }
+      }
+      .steps-checkbox:checked ~.step-text {
+        display: flex;
       }
     }
   }
