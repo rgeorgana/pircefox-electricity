@@ -1,3 +1,30 @@
+/* CSS-only Menu and Submenus (mobile version)
+
+For the main menu, we use a hidden checkbox ("menu-checkbox" class) to determine whether or not it is displayed.
+The label users can click to check this checkbox is the burger menu icon. When the checkbox is checked,
+the menu is open and the burger menu icon turns into an "X" icon. When it is unchecked, the page returns to its previous
+state (burger menu icon and no menu displayed).
+
+For the submenus, we use hidden radio buttons ("submenus" name and "submenus" class). Each submenu has a label with
+a respective id. The labels users can click on to select the radio buttons are the rows with the names of the respective
+submenus and the down-arrows next to them. When a radio button is checked, its respective submenu appears, the name of
+the submenu turns orange (in contrast to the original blue color every submenu has when it is closed) and the down-arrow
+next to it becomes an up-arrow (also turns orange). With the usage of radio buttons, we achieve mutual exclusivity,
+forcing only the most recently clicked submenu to be open at each time.
+Because radio-buttons don't have the option to become unselected like checkboxes, and in order for the submenus to be
+able to close, we have created an extra hidden radio button (same name, "submenus-close" class and "orange-radio" id).
+The label users can click on to select that radio button is hidden when all submenus are closed. When a submenu is open,
+its respective original label becomes unavailable and the "orange-radio" label takes its place (it is the row with the
+orange name of the opened submenu and the up-arrow next to it). Therefore, when the users click on the name of an opened
+submenu, they are using the "orange-radio" radio button and it results in no submenus being open, the original submenu
+label to be available again and the "orange-radio" label to be hidden again. To achieve this, there is a hidden label for
+the "orange-radio" radio button "inside" every submenu label. When the "orange-radio" label becomes available, it is placed
+"over" the original label and is therefore the one clicked in its place, resulting in the "orange-menu" label to become
+hidden and the original submenu label to be able to be clicked again.
+
+Both the main menu checkbox and the submenu radio buttons use "autocomplete-off" so that the browser won't "remember"
+what the user selected before and will reset their choices on every new visit. */
+
 *{
   margin: 0;
   padding: 0;
