@@ -1,0 +1,241 @@
+/* CSS-only Menu and Submenus (mobile version)
+
+For the main menu, we use a hidden checkbox ("menu-checkbox" class) to determine whether or not it is displayed.
+The label users can click to check this checkbox is the burger menu icon. When the checkbox is checked,
+the menu is open and the burger menu icon turns into an "X" icon. When it is unchecked, the page returns to its previous
+state (burger menu icon and no menu displayed).
+
+For the submenus, we use hidden radio buttons ("submenus" name and "submenus" class). Each submenu has a label with
+a respective id. The labels users can click on to select the radio buttons are the rows with the names of the respective
+submenus and the down-arrows next to them. When a radio button is checked, its respective submenu appears, the name of
+the submenu turns orange (in contrast to the original blue color every submenu has when it is closed) and the down-arrow
+next to it becomes an up-arrow (also turns orange). With the usage of radio buttons, we achieve mutual exclusivity,
+forcing only the most recently clicked submenu to be open at each time.
+Because radio-buttons don't have the option to become unselected like checkboxes, and in order for the submenus to be
+able to close, we have created an extra hidden radio button (same name, "submenus-close" class and "orange-radio" id).
+The label users can click on to select that radio button is hidden when all submenus are closed. When a submenu is open,
+its respective original label becomes unavailable and the "orange-radio" label takes its place (it is the row with the
+orange name of the opened submenu and the up-arrow next to it). Therefore, when the users click on the name of an opened
+submenu, they are using the "orange-radio" radio button and it results in no submenus being open, the original submenu
+label to be available again and the "orange-radio" label to be hidden again. To achieve this, there is a hidden label for
+the "orange-radio" radio button "inside" every submenu label. When the "orange-radio" label becomes available, it is placed
+"over" the original label and is therefore the one clicked in its place, resulting in the "orange-menu" label to become
+hidden and the original submenu label to be able to be clicked again.
+
+Both the main menu checkbox and the submenu radio buttons use "autocomplete-off" so that the browser won't "remember"
+what the user selected before and will reset their choices on every new visit. */
+
+header{
+  /*sizes+position*/
+  width: 100vw;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  /*coloring*/
+  background: white;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .hide-in-mobile {
+  /*flexbox*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*sizes+position*/
+  height: 80px;
+  padding: 0 5%;
+  .category:hover{
+    color: rgb(242,110,34);
+    .arrow-up{
+      display: none;
+    }
+    .arrow-down{
+      display: inline;
+    }
+  }
+  .logo img{
+    width: 170px;
+    height: 66px;
+    padding-bottom: 10px;
+    vertical-align: middle;
+  }
+  .menu{
+    display: flex;
+    .category{
+      /*sizes+position*/
+      padding-right: 35px;
+      /*flexbox*/
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      /*text*/
+      font-size: 1.14rem;
+      .arrow-down{
+        display: none;
+      }
+    }
+    img{
+      padding-top: 2px;
+    }
+  }
+  .tel{
+    /*flexbox*/
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /*border*/
+    border: 1px solid rgb(242,110,34);
+    border-radius: 8px;
+    /*sizes+position*/
+    width: 173px;
+    height: 45px;
+    padding: 0 5px;
+    /*text*/
+    font-size: 1.14rem;
+    p {
+      margin: 0;
+      padding-top: 3px;
+    }
+    img{
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
+header .hide-in-desktop {
+  .menu-checkbox, .submenus {
+    display: none;
+  }
+  .menu-checkbox:checked ~ .header .menu-button .menu-toggle {
+    .close {
+      display: block;
+    }
+    .open {
+      display: none;
+    }
+  }
+  .menu-checkbox:checked ~ .dropdown-menu {
+    display: block;
+  }
+  .menu-checkbox:not(:checked) ~ .dropdown-menu {
+    display: none;
+  }
+  .header {
+    /*flexbox*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*sizes+position*/
+    height: 54px;
+    padding: 0 5%;
+
+    .menu-button {
+      .menu-toggle {
+        .close {
+          display: none;
+        }
+      }
+    }
+    img {
+      /*sizes+position*/
+      vertical-align: middle;
+      width: 23px;
+      height: 23px;
+    }
+    .logo img {
+      width: 129px;
+      height: 40px;
+      padding-bottom: 3px;
+      vertical-align: middle;
+    }
+    .tel {
+      /*flexbox*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /*sizes+position*/
+      width: 27px;
+      height: 27px;
+      padding: 0 5px;
+      img {
+        width: 27px;
+        height: 27px;
+      }
+    }
+  }
+}
+.dropdown-menu {
+  /*colours*/
+  background-color: white;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  /*size+position*/
+  width: 100vw;
+  position: fixed;
+  top: 54px;
+  #orange-radio {
+    display: none;
+  }
+  .submenus {
+    display: none;
+  }
+  .submenus:checked +.submenu-label{
+    .menu-item .menu-title {
+      .blue-menu {
+        display: none;
+      }
+      .orange-menu {
+        display: flex;
+      }
+    }
+    .menu-item .submenu {
+      display: block;
+    }
+  }
+  .submenu-label{
+    .menu-item {
+      .menu-title{
+        .any-menu{
+          /*flexbox*/
+          display: flex;
+          justify-content: space-between;
+          /*border*/
+          border-top: 1px solid #8D8E9F;
+          /*position*/
+          padding: 7px 5%;
+          /*text*/
+          font-weight: 500;
+          font-size: 1.14rem;
+        }
+        .orange-menu {
+          display: none;
+          /*text*/
+          color: #f26e22;
+        }
+      }
+      .submenu {
+        display: none;
+        /*box*/
+        border-top: 1px solid #8D8E9F;
+        /*size*/
+        max-height: 567px;
+        overflow: auto;
+        .submenu-content {
+          /*position*/
+          margin-bottom: 10px;
+          /*flexbox*/
+          display: flex;
+          flex-direction: column;
+          p, a {
+            /*position*/
+            padding: 10px 5% 10px;
+            margin: 0;
+            /*text*/
+            font-weight: 500;
+            font-size: 1.14rem;
+          }
+        }
+      }
+    }
+  }
+}
