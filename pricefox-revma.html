@@ -52,7 +52,7 @@
         <input type="checkbox" class="menu-checkbox submenus" id="menu" autocomplete="off">
         <div class="header">
             <div class="menu-button">
-                <label for="menu" class="menu-toggle">
+                <label for="menu" id="menu-toggle" class="menu-toggle" role="button" tabindex="0" aria-controls="dropdown" aria-expanded="false">
                     <img class="open" src="https://assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/burger-menu.svg" alt="burger icon for navigation">
                     <img class="close" src="https://assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/close.svg" alt="close icon for navigation">
                 </label>
@@ -66,22 +66,22 @@
                 <img src="https://assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/orange-phone.svg" alt="Telephone">
             </a>
         </div>
-        <div class="dropdown-menu">
+        <nav class="dropdown-menu" id="dropdown" aria-label="Main navigation" aria-labelledby="menu-toggle">
             <input type="radio" name="submenus" id="orange-radio" class="submenus-close" autocomplete="off">
-            <input type="radio" name="submenus" id="car" class="submenus" autocomplete="off">
-            <label for="car" class="submenu-label">
-                <div class="menu-item">
+            <ol>
+                <li class="menu-item">
+                    <input type="radio" name="submenus" id="car" class="submenus" autocomplete="off">
                     <div class="menu-title">
-                        <div class="blue-menu any-menu">
+                        <label for="car" id="car-label" class="submenu-label blue-menu any-menu" role="button" tabindex="0" aria-controls="car-submenu" aria-expanded="false">
                             <p class="menu-name">Αυτοκίνητο</p>
                             <img class="open-btn" src="https://assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/arrow-blue.svg" alt="blue down arrow">
-                        </div>
-                        <label for="orange-radio" class="orange-menu any-menu">
+                        </label>
+                        <label for="orange-radio" class="orange-menu any-menu" role="button" tabindex="0" aria-controls="car-submenu" aria-expanded="true">
                             <p class="menu-name-orange">Αυτοκίνητο</p>
                             <img class="close-btn" src="https://assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/arrow-orange-up.svg" alt="orange up arrow">
                         </label>
                     </div>
-                    <div class="submenu">
+                    <div class="submenu" id="car-submenu" role="region" aria-labelledby="car-label">
                         <div class="submenu-content">
                             <p class="submenu-title"><strong>Ασφάλεια</strong></p>
                             <a class="submenu-content" href="https://www.pricefox.gr/%CE%B1%CF%83%CF%86%CE%AC%CE%BB%CE%B5%CE%B9%CE%B1-%CE%B1%CF%85%CF%84%CE%BF%CE%BA%CE%B9%CE%BD%CE%AE%CF%84%CE%BF%CF%85/">Αυτοκινήτου</a>
@@ -110,22 +110,20 @@
                             <a class="submenu-content" href="https://www.pricefox.gr/%CE%B1%CF%83%CF%86%CE%AC%CE%BB%CE%B5%CE%B9%CE%B1-%CE%B1%CF%85%CF%84%CE%BF%CE%BA%CE%B9%CE%BD%CE%AE%CF%84%CE%BF%CF%85/bonus-malus/">Bonus Malus</a>
                         </div>
                     </div>
-                </div>
-            </label>
-            <input type="radio" name="submenus" id="energy" class="submenus" autocomplete="off">
-            <label for="energy" class="submenu-label">
-                <div class="menu-item">
+                </li>
+                <li class="menu-item">
+                    <input type="radio" name="submenus" id="energy" class="submenus" autocomplete="off">
                     <div class="menu-title">
-                        <div class="blue-menu any-menu">
+                        <label for="energy" id="energy-label" class="submenu-label blue-menu any-menu" role="button" tabindex="0" aria-controls="energy-submenu" aria-expanded="false">
                             <p class="menu-name">Ενέργεια</p>
                             <img class="open-btn" src="https://assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/arrow-blue.svg" alt="blue down arrow">
-                        </div>
-                        <label for="orange-radio" class="orange-menu any-menu">
+                        </label>
+                        <label for="orange-radio" class="orange-menu any-menu" role="button" tabindex="0" aria-controls="energy-submenu" aria-expanded="true">
                             <p class="menu-name-orange">Ενέργεια</p>
                             <img class="close-btn" src="https://assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/arrow-orange-up.svg" alt="orange up arrow">
                         </label>
                     </div>
-                    <div class="submenu">
+                    <div class="submenu" id="energy-submenu" role="region" aria-labelledby="energy-label">
                         <div class="submenu-content">
                             <p class="submenu-title"><strong>Οικιακό & Επαγγελματικό</strong></p>
                             <a class="submenu-content" href="https://www.pricefox.gr/%CF%81%CE%B5%CF%8D%CE%BC%CE%B1/">Ρεύμα</a>
@@ -143,21 +141,20 @@
                             <a class="submenu-content" href="https://www.pricefox.gr/%CF%81%CE%B5%CF%8D%CE%BC%CE%B1/%CE%BF%CE%B4%CE%B7%CE%B3%CF%8C%CF%82-%CE%B5%CE%BD%CE%AD%CF%81%CE%B3%CE%B5%CE%B9%CE%B1%CF%82/">Ρεύμα & Αέριο</a>
                         </div>
                     </div>
-                </div>
-            </label>
-            <input type="radio" name="submenus" id="home" class="submenus" autocomplete="off">
-            <label for="home" class="submenu-label">
-                <div class="menu-item">
+                </li>
+                <li class="menu-item">
+                    <input type="radio" name="submenus" id="home" class="submenus" autocomplete="off">
                     <div class="menu-title">
-                        <div class="blue-menu any-menu">
+                        <label for="home" id="home-label" class="submenu-label blue-menu any-menu" role="button" tabindex="0" aria-controls="home-submenu" aria-expanded="false">
                             <p class="menu-name">Κατοικία</p>
                             <img class="open-btn" src="https://assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/arrow-blue.svg" alt="blue down arrow">
-                        </div>
-                        <label for="orange-radio" class="orange-menu any-menu">
+                        </label>
+                        <label for="orange-radio" class="orange-menu any-menu" role="button" tabindex="0" aria-controls="home-submenu" aria-expanded="true">
                             <p class="menu-name-orange">Κατοικία</p>
                             <img class="close-btn" src="https://assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/arrow-orange-up.svg" alt="orange up arrow">
-                        </label>                        </div>
-                    <div class="submenu">
+                        </label>
+                    </div>
+                    <div class="submenu" id="home-submenu" role="region" aria-labelledby="home-label">
                         <div class="submenu-content">
                             <p class="submenu-title"><strong>Ασφάλεια</strong></p>
                             <a class="submenu-content" href="https://www.pricefox.gr/%CE%B1%CF%83%CF%86%CE%AC%CE%BB%CE%B5%CE%B9%CE%B1-%CF%83%CF%80%CE%B9%CF%84%CE%B9%CE%BF%CF%8D/">Σπιτιού</a>
@@ -168,43 +165,39 @@
                             <a class="submenu-content" href="https://www.pricefox.gr/%CE%B1%CF%83%CF%86%CE%AC%CE%BB%CE%B5%CE%B9%CE%B1-%CF%83%CF%80%CE%B9%CF%84%CE%B9%CE%BF%CF%8D/%CE%BF%CE%B4%CE%B7%CE%B3%CF%8C%CF%82-%CE%B1%CF%83%CF%86%CE%AC%CE%BB%CE%B9%CF%83%CE%B7%CF%82/">Σπιτιού</a>
                         </div>
                     </div>
-                </div>
-            </label>
-            <input type="radio" name="submenus" id="health" class="submenus" autocomplete="off">
-            <label for="health" class="submenu-label">
-                <div class="menu-item">
+                </li>
+                <li class="menu-item">
+                    <input type="radio" name="submenus" id="health" class="submenus" autocomplete="off">
                     <div class="menu-title">
-                        <div class="blue-menu any-menu">
+                        <label for="health" id="health-label" class="submenu-label blue-menu any-menu" role="button" tabindex="0" aria-controls="health-submenu" aria-expanded="false">
                             <p class="menu-name">Υγεία</p>
                             <img class="open-btn" src="https://assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/arrow-blue.svg" alt="blue down arrow">
-                        </div>
-                        <label for="orange-radio" class="orange-menu any-menu">
+                        </label>
+                        <label for="orange-radio" class="orange-menu any-menu" role="button" tabindex="0" aria-controls="health-submenu" aria-expanded="true">
                             <p class="menu-name-orange">Υγεία</p>
                             <img class="close-btn" src="https://assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/arrow-orange-up.svg" alt="orange up arrow">
                         </label>
                     </div>
-                    <div class="submenu">
+                    <div class="submenu" id="health-submenu" role="region" aria-labelledby="health-label">
                         <div class="submenu-content">
                             <p class="submenu-title"><strong>Ασφάλεια</strong></p>
                             <a class="submenu-content" href="https://www.pricefox.gr/%CE%B1%CF%83%CF%86%CE%AC%CE%BB%CE%B5%CE%B9%CE%B1-%CF%85%CE%B3%CE%B5%CE%AF%CE%B1%CF%82/">Υγείας</a>
                         </div>
                     </div>
-                </div>
-            </label>
-            <input type="radio" name="submenus" id="about" class="submenus">
-            <label for="about" class="submenu-label">
-                <div class="menu-item">
+                </li>
+                <li class="menu-item">
+                    <input type="radio" name="submenus" id="about" class="submenus">
                     <div class="menu-title">
-                        <div class="blue-menu any-menu">
+                        <label for="about" id="about-label" class="submenu-label blue-menu any-menu" role="button" tabindex="0" aria-controls="about-submenu" aria-expanded="false">
                             <p class="menu-name">Σχετικά με εμάς</p>
                             <img class="open-btn" src="https://assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/arrow-blue.svg" alt="blue down arrow">
-                        </div>
-                        <label for="orange-radio" class="orange-menu any-menu">
+                        </label>
+                        <label for="orange-radio" class="orange-menu any-menu" role="button" tabindex="0" aria-controls="about-submenu" aria-expanded="true">
                             <p class="menu-name-orange">Σχετικά με εμάς</p>
                             <img class="close-btn" src="https://assets.pricefox.gr/greece/pricefox.gr/production/gr/images/ci/new-landing/arrow-orange-up.svg" alt="orange up arrow">
                         </label>
                     </div>
-                    <div class="submenu">
+                    <div class="submenu" id="about-submenu" role="region" aria-labelledby="about-label">
                         <div class="submenu-content">
                             <a class="submenu-content" href="https://www.pricefox.gr/%CE%B7-%CE%B5%CF%84%CE%B1%CE%B9%CF%81%CE%B5%CE%AF%CE%B1-%CE%BC%CE%B1%CF%82/">Η Εταιρία μας</a>
                             <a class="submenu-content" href="https://job-boards.greenhouse.io/pricefox">Θέσεις Εργασίας</a>
@@ -218,9 +211,9 @@
                             <a class="submenu-content" href="https://www.pricefox.gr/%CE%B7-%CE%B5%CF%84%CE%B1%CE%B9%CF%81%CE%B5%CE%AF%CE%B1-%CE%BC%CE%B1%CF%82/%CF%84%CE%B1-%CE%B2%CF%81%CE%B1%CE%B2%CE%B5%CE%AF%CE%B1-%CE%BC%CE%B1%CF%82/">Βραβεία</a>
                         </div>
                     </div>
-                </div>
-            </label>
-        </div>
+                </li>
+            </ol>
+        </nav>
     </div>
 </header>
 
